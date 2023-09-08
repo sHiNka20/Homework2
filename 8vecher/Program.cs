@@ -2,18 +2,18 @@
 
 Random rnd = new Random();
 
-int chet = 0;
+int a = 0;
+
 Console.Write("[");
-for(int i = 0; i < arr.Length;i++)
+for (int i = 0;i < arr.Length; i++)
 {
-    arr[i] = rnd.Next(100, 1000);
+    arr[i] = rnd.Next(-1000, 1001);
     Console.Write(arr[i]);
     Console.Write(", ");
 }
 Console.Write("] -> ");
-for(int i =0; i < arr.Length;i++)
+for (int i = 1; i < arr.Length; i += 2)
 {
-    if (arr[i] % 2 == 0)
-        chet++;
+    a = a + arr[i];
 }
-Console.WriteLine(chet);
+Console.WriteLine(a);
